@@ -16,7 +16,7 @@ const solutionTry = galleryItems.map((solutionOne)=>
 class="gallery__link"><img src =${solutionOne.preview}
 class="gallery__image"
 data-source=${solutionOne.original}
-alt=${solutionOne.description}></a>`);
+alt=${solutionOne.description}></a>`).join("");
 
 getGallery.innerHTML =solutionTry;
 
