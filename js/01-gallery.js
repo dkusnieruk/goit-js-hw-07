@@ -8,8 +8,7 @@ const addItem = document.createElement(`a`);
 const addImage= document.createElement(`img`);
 
 
-// getGallery.appendChild(addItem);
-// addItem.appendChild(addImage);
+
 
 const solutionTry = galleryItems.map((solutionOne)=>
 `<a href =${solutionOne.original}
