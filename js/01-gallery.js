@@ -13,11 +13,10 @@ const addImage= document.createElement(`img`);
 
 const solutionTry = galleryItems.map((solutionOne)=>
 `<a href =${solutionOne.original}
-class="gallery__link">
-<img src =${solutionOne.preview}
+class="gallery__link"><img src =${solutionOne.preview}
 class="gallery__image"
 data-source=${solutionOne.original}
-alt=${solutionOne.description}>null</a>`);
+alt=${solutionOne.description}></a>`);
 
 getGallery.innerHTML =solutionTry;
 
