@@ -12,13 +12,19 @@ const addImage= document.createElement(`img`);
 
 
 
-const pictures = galleryItems.map((picture)=> {
+const pictures = galleryItems.map((picture)=>{ 
 `<a href =${picture.original}
 class="gallery__link"><img src =${picture.preview}
 class="gallery__image"
 data-source=${picture.original}
-alt=${picture.description}></a>`});
-console.log(pictures);
+alt=${picture.description}></a>`
+return picture}
+
+)
+
+
+
+
 
 gallery.innerHTML =pictures;
 
