@@ -1,24 +1,31 @@
 import { galleryItems } from './gallery-items.js';
+
 // Change code below this line
+
 
 console.log(galleryItems);
 
-const getGallery = document.querySelector(`.gallery`);
+const gallery = document.querySelector(`.gallery`);
 const addItem = document.createElement(`a`);
 const addImage= document.createElement(`img`);
 
 
 
 
-const solutionTry = galleryItems.map((solutionOne)=>
-`<a href =${solutionOne.original}
-class="gallery__link"><img src =${solutionOne.preview}
+const pictures = galleryItems.map((picture)=>
+`<a href =${picture.original}
+class="gallery__link"><img src =${picture.preview}
 class="gallery__image"
-data-source=${solutionOne.original}
-alt=${solutionOne.description}></a>`).join("");
-
-getGallery.innerHTML =solutionTry;
+data-source=${picture.original}
+alt=${picture.description}></a>`).join("");
 
 
+gallery.innerHTML =pictures;
 
-console.log(getGallery);
+gallery.addEventListener(`click`, (event)=>{
+event.preventDefault();
+console.log(event.target);
+const basicPhotos = basicLightbox.create(`<img src = ${event.target}>`);
+basicPhotos.show();
+});
+
