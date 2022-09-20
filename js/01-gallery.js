@@ -8,7 +8,7 @@ console.log(galleryItems);
 const gallery = document.querySelector(`.gallery`);
 
 
-const solutionSearch = galleryItems.forEach((element)=>{
+const setGallery = galleryItems.forEach((element)=>{
     console.log(element);
     const link=document.createElement(`a`);
     const imageGallery=document.createElement(`img`);
@@ -21,6 +21,13 @@ const solutionSearch = galleryItems.forEach((element)=>{
 
     gallery.append(link);
     link.append(imageGallery);
+});
+
+gallery.addEventListener(`click`, (event)=>{
+    event.preventDefault();
+    console.log(event.target);
+    const basicEdit = basicLightbox.create(`<img src ="https://cdn.pixabay.com/photo/2019/05/14/16/43/himilayan-blue-poppy-4202825_1280.jpg">}`);
+    basicEdit.show();
 });
 
 // const pictures = galleryItems.map((picture)=>
