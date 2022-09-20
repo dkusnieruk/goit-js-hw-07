@@ -25,8 +25,8 @@ const setGallery = galleryItems.forEach((element)=>{
 
 gallery.addEventListener(`click`, (event)=>{
     event.preventDefault();
-    console.log(event.target);
-    const basicEdit = basicLightbox.create(`<img src ="https://cdn.pixabay.com/photo/2019/05/14/16/43/himilayan-blue-poppy-4202825_1280.jpg">}`);
+    console.log(event.target.src);
+    const basicEdit = basicLightbox.create(`<img src = "${event.target.src}">`);
     basicEdit.show();
 });
 
