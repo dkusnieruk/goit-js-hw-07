@@ -28,15 +28,10 @@ gallery.addEventListener(`click`, (event)=>{
     console.log(event.target.dataset.source);
     const basicEdit = basicLightbox.create(`<img src = "${event.target.dataset.source}">`);
     basicEdit.show();
+    console.log(basicEdit);
 
-    basicEdit.addEventListener(`keyup`, (event)=>{
-        if ( event.code === 27){
-            console.log(event.code)
-            basicEdit.close()
-        }
-    })
 });
-
+ 
 // const pictures = galleryItems.map((picture)=>
 // `<a href =${picture.original}
 // class="gallery__link"><img src =${picture.preview}
