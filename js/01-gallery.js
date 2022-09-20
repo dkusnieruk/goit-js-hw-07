@@ -25,9 +25,16 @@ const setGallery = galleryItems.forEach((element)=>{
 
 gallery.addEventListener(`click`, (event)=>{
     event.preventDefault();
-    console.log(event.target.src);
-    const basicEdit = basicLightbox.create(`<img src = "${event.target.src}">`);
+    console.log(event.target.dataset.source);
+    const basicEdit = basicLightbox.create(`<img src = "${event.target.dataset.source}">`);
     basicEdit.show();
+
+    basicEdit.addEventListener(`keyup`, (event)=>{
+        if ( event.code === 27){
+            console.log(event.code)
+            basicEdit.close()
+        }
+    })
 });
 
 // const pictures = galleryItems.map((picture)=>
