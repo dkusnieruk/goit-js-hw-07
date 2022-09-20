@@ -28,9 +28,16 @@ gallery.addEventListener(`click`, (event)=>{
     console.log(event.target.dataset.source);
     const basicEdit = basicLightbox.create(`<img src = "${event.target.dataset.source}">`);
     basicEdit.show();
-    console.log(basicEdit);
+    
+    basicEdit.addEventListener(`keydown`, (event)=>{
+        if (event.code ==27){
+            basicEdit.close();
+        }
+    })
 
-});
+    });
+
+
  
 // const pictures = galleryItems.map((picture)=>
 // `<a href =${picture.original}
