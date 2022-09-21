@@ -29,15 +29,14 @@ gallery.addEventListener(`click`, (event)=>{
     const basicEdit = basicLightbox.create(`<img src = "${event.target.dataset.source}">`);
     basicEdit.show();
     
-    basicEdit.addEventListener(`keydown`, (event)=>{
-        if (event.code ==27){
-            basicEdit.close();
-        }
-    })
-
     });
 
-
+    const modalWindow =document.getElementsByClassName(`basicLightbox`);
+        modalWindow.addEventListener(`keydown`, (event)=>{
+        if (event.keyCode === 27){
+            modalWindow.close();
+        }
+    })
  
 // const pictures = galleryItems.map((picture)=>
 // `<a href =${picture.original}
