@@ -21,10 +21,11 @@ gallery.append(listLink);
 listLink.append(listImage);
 });
 
-let gallery2 = new SimpleLightbox('.gallery a');
+let gallery2 = new SimpleLightbox('.gallery a',{captionsData:`alt`,captionDelay:250, swipeClose:true,});
 gallery.on('show.simplelightbox', function () {
 	
 });
 
 
+var lightbox = new SimpleLightbox('.gallery a', { /* options */ });
 console.log(galleryItems);
