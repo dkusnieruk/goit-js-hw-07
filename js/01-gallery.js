@@ -7,6 +7,11 @@ console.log(galleryItems);
 
 const gallery = document.querySelector(`.gallery`);
 
+document.addEventListener("keydown", event => {
+    console.log("key: ", event.key);
+    console.log("code: ", event.code);
+  });
+
 
 const setGallery = galleryItems.forEach((element)=>{
     console.log(element);
@@ -28,16 +33,19 @@ gallery.addEventListener(`click`, (event)=>{
     console.log(event.target.dataset.source);
     const basicEdit = basicLightbox.create(`<img src = "${event.target.dataset.source}">`);
     basicEdit.show();
+
+    document.addEventListener(`keydown`, (event)=>{
+        if (event.key === "Escape"){
+            basicEdit.close();
+        }
+    })
     
     });
 
-    const modalWindow =document.getElementsByClassName(`basicLightbox`);
-        modalWindow.addEventListener(`keydown`, (event)=>{
-        if (event.keyCode === 27){
-            modalWindow.close();
-        }
-    })
- 
+
+  
+    
+
 // const pictures = galleryItems.map((picture)=>
 // `<a href =${picture.original}
 // class="gallery__link"><img src =${picture.preview}
