@@ -5,7 +5,7 @@ const gallery= document.querySelector(`.gallery`);
 console.log(gallery);
 
 const setGallery = galleryItems.forEach((element)=>{
-  const listItem = document.createElement(`li`);
+ 
   const listLink = document.createElement(`a`);
   const listImage= document.createElement(`img`);
 
@@ -16,11 +16,15 @@ const setGallery = galleryItems.forEach((element)=>{
   listImage.setAttribute(`src`, `${element.preview}`);
   listImage.setAttribute(`class`, `gallery__image`);
 
-gallery.append(listItem);
-listItem.append(listLink);
+
+gallery.append(listLink);
 listLink.append(listImage);
 });
 
+let gallery2 = new SimpleLightbox('.gallery a');
+gallery.on('show.simplelightbox', function () {
+	
+});
 
 
 console.log(galleryItems);
