@@ -7,11 +7,6 @@ console.log(galleryItems);
 
 const gallery = document.querySelector(`.gallery`);
 
-document.addEventListener("keydown", event => {
-    console.log("key: ", event.key);
-    console.log("code: ", event.code);
-  });
-
 
 const setGallery = galleryItems.forEach((element)=>{
     console.log(element);
@@ -46,23 +41,3 @@ gallery.addEventListener(`click`, (event)=>{
   
     
 
-// const pictures = galleryItems.map((picture)=>
-// `<a href =${picture.original}
-// class="gallery__link"><img src =${picture.preview}
-// class="gallery__image"
-// data-source=${picture.original}
-// alt=${picture.description}></a>`).join("");
-
-
-// gallery.innerHTML =pictures;
-
-// gallery.addEventListener(`click`, (event)=>{
-// event.preventDefault();
-// console.log(event.target);
-// const basicPhotos = basicLightbox.create(`<img ${event.target} >`);
-// basicPhotos.show();
-// });
-
-
-
-    

@@ -27,5 +27,3 @@ gallery.on('show.simplelightbox', function () {
 });
 
 
-var lightbox = new SimpleLightbox('.gallery a', { /* options */ });
-console.log(galleryItems);
